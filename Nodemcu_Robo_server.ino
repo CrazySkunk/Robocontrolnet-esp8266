@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 
 // Replace with your network credentials
-const char* ssid     = "Tecno Camon 18";
-const char* password = "rutherford89";
+const char* ssid     = "iPhone";
+const char* password = "0987654311";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -101,7 +101,7 @@ void loop(){
               Serial.println("GPIO 4 on");
               output4State = "on";
               digitalWrite(output4, HIGH);
-            } else if (header.indexOf("GET /4/off") >= 0) {
+            } else if(header.indexOf("GET /4/off") >= 0) {
               Serial.println("GPIO 4 off");
               output4State = "off";
               digitalWrite(output4, LOW);

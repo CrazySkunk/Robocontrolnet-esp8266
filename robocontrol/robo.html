@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Net Control</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .center{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            ". forward ."
+            "lefty alt righty"
+            ". backward .";
+        }
+        .item-5{
+            grid-area: forward;
+        }
+        .item-4{
+            grid-area: righty;
+        }
+        .item-3{
+            grid-area: alt;
+        }
+        .item-2{
+            grid-area: backward;
+        }
+        .item-1{
+            grid-area: lefty;
+        }
+        .button{
+            margin: 1em;
+            padding: 1em;
+            width: 5em;
+            border-radius: 10px;
+            border: 1px transparent solid;
+            box-shadow:1px 2px 4px grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Robot Net Control</h1>
+    <div class="center">
+        <div class="container">
+            <div class = "item item-5"><a href="/5/on"><button class="button">▲</button></a></div>
+            <div class = "item item-4"><a href="/4/on"><button class="button">►</button></a></div>
+            <div class = "item item-3"><a href="/3/on"><button class="button">ALT</button></a></div>
+            <div class = "item item-2"><a href="/2/on"><button class="button">▼</button></a></div>
+            <div class = "item item-1"><a href="/1/0n"><button class="button">◄</button></a></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
